@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no">
+    <title>Anu's fact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        @media only screen and (max-width: 390px) and (max-height: 844px) {
+            body {
+                font-size: 14px;
+            }
+            .btn {
+                width: 80%;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>🐣</h1>
+    <h2>Анужин хөөрхөн үү?</h2>
+    <button class="btn" id="yesButton" onclick="showMessage()">Тийншдэ^^, хөөрхөн бас эгдүүтэй🥰</button>
+    <button class="btn" id="noButton" onclick="showAlert()">Гүэ, ерөөсөө хөөрхөн биш😅</button>
+    <p id="message"></p>
+
+    <script>
+        function showMessage() {
+          alert("Харин тийм бгаз 😁.");
+        }
+        
+        function showAlert() {
+            alert("Та буруу хариултыг сонголоо, асуултаа уншаад дахиад хариулна уу.");
+            document.getElementById("noButton").innerText = "Тийншдэ^^, хөөрхөн бас эгдүүтэй🥰";
+            document.getElementById("noButton").setAttribute("onclick", "showMessage()");
+        }
+    </script>
+</body>
+</html>
